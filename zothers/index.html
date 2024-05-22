@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation - Easy Tutorials YouTube Channel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <form class="form" method="post" action="/uploadfiles" enctype="multipart/form-data">
+      <i class="bi bi-telegram"></i>
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" id="name" onkeyup="validatename()" name="name">
+        <span id="name_error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="number" placeholder="8858258387" id="contact" onkeyup="validatecontact()" name="contact">
+        <span id="phone_error"></span>
+
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" placeholder="Enter Email" id="email" onkeyup="validateemail()" name="email_address">
+        <span id="email_error"></span>
+      </div>
+      <div class="input-group">
+        <label>Your photo</label>
+        <input type="file" placeholder="Choose1 photo" name="user_file1">
+      </div>
+      <div class="input-group">
+        <label>Your photo</label>
+        <input type="file" placeholder="Choose2 photo" name="user_file2" multiple>
+      </div>
+
+      <div class="input-group">
+        <label>Your Message</label>
+        <textarea rows="5" placeholder="Enter your message" style="resize: none;" id="massage" onkeyup="validatemassage()" name="address" type="textarea"></textarea>
+        <span id="massage_error" ></span>
+      </div>
+
+      <button id="submit" onclick="return validateform()">Submit</button>
+      <span id="submit_error"></span>
+    </form>
+
+
+    <div class="useful-links">
+      <a href="https://youtu.be/fz8bwvn9lA4">Find Related video</a>
+      <a href="https://www.youtube.com/c/EasyTutorialsVideo?sub_confirmation=1">Check playlist</a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+ 
+</body>
+
+</html>
